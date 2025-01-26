@@ -51,8 +51,7 @@ Here’s the text rewritten in a clean and consistent format in English:
 2. Download the code:
 
    ```bash
-   git clone https://github.com/alphaunx/alphaunx-go.git
-   cd alphaunx-go
+   https://raw.githubusercontent.com/alphaunx/alphaunx-go/refs/heads/main/alphaunx.go
    ```
 
 3. Run the tool:
