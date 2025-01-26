@@ -25,11 +25,10 @@ Here’s the text rewritten in a clean and consistent format in English:
    pkg install golang
    ```
 
-2. Download the code:
+2. Installing using wget :
 
    ```bash
-   git clone https://github.com/alphaunx/alphaunx-go.git
-   cd alphaunx-go
+https://raw.githubusercontent.com/alphaunx/alphaunx-go/refs/heads/main/alphaunx.go
    ```
 
 3. Run the tool:
