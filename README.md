@@ -1,42 +1,5 @@
-If the **copy button** is not appearing next to the code blocks in your GitHub `README.md` file, it is likely due to **improper formatting** of the code blocks. GitHub automatically adds a copy button to properly formatted code blocks. Below are the steps to fix this issue and ensure the copy button appears for all embedded commands:
 
 ---
-
-### **Steps to Fix the Issue**
-
-1. **Use Proper Code Block Formatting**:
-   - Ensure all code blocks are wrapped in **triple backticks** (```` ``` ````).
-   - Specify the **language** after the opening backticks (e.g., ````bash```` for Bash commands or ````plaintext```` for plain text).
-
-   Example:
-   ```markdown
-   ```bash
-   go run alphaunx.go hosts.txt
-   ```
-   ```
-
-2. **Check for Consistent Formatting**:
-   - Make sure every code block in your `README.md` file follows the same formatting rules.
-   - Avoid mixing spaces or tabs in the formatting.
-
-3. **Push the Updated README.md to GitHub**:
-   - After fixing the formatting, push the updated `README.md` file to your GitHub repository.
-
-   ```bash
-   git add README.md
-   git commit -m "Fix code block formatting for copy button"
-   git push origin main
-   ```
-
-4. **Clear GitHub Cache (if needed)**:
-   - Sometimes, GitHub caches the `README.md` file. To ensure the changes are reflected:
-     - Wait a few minutes.
-     - Refresh the GitHub page.
-     - If the issue persists, try opening the repository in an incognito/private browser window.
-
----
-
-### **Example of Correctly Formatted README.md**
 
 ```markdown
 # AlphaUnx (alphaunx.go)
@@ -121,27 +84,18 @@ AlphaUnx (`alphaunx.go`) is a fast and efficient tool for scanning servers and e
 
 ### `hosts.txt` File
 
-```plaintext
+```
 example.com
 google.com
 github.com
 ```
 
-### Command
+### Running the Tool
 
 ```bash
 go run alphaunx.go hosts.txt
 ```
 
-### Output
-
-```plaintext
-[✓] example.com [200] Nginx
-[✓] google.com [200] Google Frontend
-[✓] github.com [200] GitHub.com
-```
-
----
 
 ## Notes
 
@@ -158,16 +112,4 @@ go run alphaunx.go hosts.txt
 - **Telegram**: @1300e
 ```
 
----
-
-### **Why the Copy Button Might Not Appear**
-
-- **Improper Formatting**: If the code block is not wrapped in triple backticks or the language is not specified, GitHub may not recognize it as a code block.
-- **Caching Issues**: GitHub sometimes caches the `README.md` file. Wait a few minutes or refresh the page.
-- **Mixed Formatting**: Avoid mixing spaces or tabs in the formatting, as this can break the code block rendering.
-
----
-
-### **Final Notes**
-
-After following the steps above, the **copy button** should appear next to all code blocks in your `README.md` file when viewed on GitHub. If the issue persists, double-check the formatting and ensure there are no hidden characters or syntax errors.
+--
