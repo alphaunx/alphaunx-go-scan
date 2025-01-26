@@ -21,7 +21,6 @@ const (
     Gray      = "\033[37m"
 )
 
-//Note do not change anything in file tool may crash if you are not an expert.
 const banner = Green + `
 ▄▀█ █░░ █▀█ █░█ ▄▀█ █▀ █▀▀ ▄▀█ █▄░█
 █▀█ █▄▄ █▀▀ █▀█ █▀█ ▄█ █▄▄ █▀█ █░▀█
@@ -60,7 +59,7 @@ type Scanner struct {
 func NewScanner(totalDomains int) *Scanner {
     transport := &http.Transport{
         DialContext: (&net.Dialer{
-            Timeout:   5 * time.Second,  // Reduced timeout
+            Timeout:   5 * time.Second,
             KeepAlive: 30 * time.Second,
         }).DialContext,
         TLSClientConfig:    &tls.Config{InsecureSkipVerify: true},
@@ -72,7 +71,7 @@ func NewScanner(totalDomains int) *Scanner {
     return &Scanner{
         client: &http.Client{
             Transport: transport,
-            Timeout:   10 * time.Second,  // Reduced timeout
+            Timeout:   10 * time.Second,
         },
         startTime:    time.Now(),
         totalDomains: totalDomains,
@@ -86,7 +85,22 @@ func (s *Scanner) processDomain(domain string) Result {
     }
 
     start := time.Now()
-    resp, err := s.client.Head(domain) // Use HEAD for Zero Data
+    
+    // Try HTTP first
+    resp, err := s.client.Head(domain)
+    if err != nil {
+        // If HTTP fails, try HTTPS
+        if !strings.HasPrefix(domain, "https") {
+            httpsURL := "https://" + strings.TrimPrefix(domain, "http://")
+            resp2, err2 := s.client.Head(httpsURL)
+            if err2 == nil {
+                resp = resp2
+                err = nil
+                domain = httpsURL
+            }
+        }
+    }
+    
     duration := time.Since(start)
 
     result := Result{
@@ -111,10 +125,12 @@ func (s *Scanner) addResult(result Result) {
     s.mu.Unlock()
     atomic.AddInt64(&s.processedDomains, 1)
     
-    // Print result immediately
     percentage := float64(atomic.LoadInt64(&s.processedDomains)) / float64(s.totalDomains) * 100
     
-    if result.Error != nil || result.StatusCode >= 400 {
+    // Consider a domain working if it responds with any status code
+    isWorking := result.Error == nil
+    
+    if !isWorking {
         fmt.Printf("\r%s[%6.1f%%] %-40s %s✗%s%s\n",
             Gray, percentage, result.Domain, Red, Reset, Gray)
         return
@@ -131,7 +147,6 @@ func (s *Scanner) addResult(result Result) {
 func detectServer(resp *http.Response) ServerInfo {
     server := ServerInfo{Type: "Unknown", Version: ""}
     
-    // Check Server header
     serverHeader := resp.Header.Get("Server")
     if serverHeader != "" {
         serverLower := strings.ToLower(serverHeader)
@@ -227,7 +242,6 @@ func detectServer(resp *http.Response) ServerInfo {
         }
     }
 
-    // Check X-Powered-By header
     poweredBy := resp.Header.Get("X-Powered-By")
     if poweredBy != "" {
         if server.Type == "Unknown" {
@@ -280,7 +294,6 @@ func main() {
 
     fmt.Printf("%s[+] Found %d domains%s\n", Green, totalDomains, Reset)
 
-    // Ask the user for the number of workers
     var workers int
     for {
         fmt.Printf("%s[+] Enter number of workers (10-500): %s", Green, Reset)
@@ -311,17 +324,17 @@ func main() {
 
     wg.Wait()
 
-    // Display results after completion (only successful responses)
     fmt.Printf("\n%s[+] Scan completed in %.2f seconds%s\n", 
         Green, time.Since(s.startTime).Seconds(), Reset)
     fmt.Printf("%s[+] Results (only successful responses):%s\n", Green, Reset)
     for _, result := range s.results {
-        if result.Error == nil && result.StatusCode < 400 { // Only show successful responses
-            fmt.Printf("%s[✓] %s%s\n", 
-                Green, result.Domain, Reset)
+        if result.Error == nil { // Show all responding domains
+            cleanDomain := strings.TrimPrefix(result.Domain, "http://")
+            cleanDomain = strings.TrimPrefix(cleanDomain, "https://")
+            fmt.Printf("%s%s%s\n", 
+                Green, cleanDomain, Reset)
         }
     }
 
-    // Add Telegram credits
     fmt.Printf("\n%s[+] Telegram Channel: @alphaunx  Owner: @l300e %s\n", Green, Reset)
 }
