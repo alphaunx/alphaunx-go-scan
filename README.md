@@ -1,6 +1,4 @@
-Here’s the text rewritten in a clean and consistent format in English:
 
----
 
 # AlphaUnx (alphaunx.go)
 
