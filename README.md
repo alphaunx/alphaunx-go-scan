@@ -1,3 +1,9 @@
+Here's the entire text corrected and fully in English:
+
+---
+
+**Tool Description**:  
+**AlphaUnx** is a fast and efficient tool for scanning servers and extracting information about them. It is written in Go and supports concurrent scanning using workers. Currently, it is in **Beta v1.0** and is actively maintained.
 
 ---
 
@@ -96,6 +102,7 @@ github.com
 go run alphaunx.go hosts.txt
 ```
 
+---
 
 ## Notes
 
@@ -112,4 +119,6 @@ go run alphaunx.go hosts.txt
 - **Telegram**: @1300e
 ```
 
---
+---
+
+This version is fully in English and corrected.
