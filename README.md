@@ -1,16 +1,10 @@
-Here's the entire text corrected and fully in English:
+Here’s the text rewritten in a clean and consistent format in English:
 
 ---
 
-**Tool Description**:  
-**AlphaUnx** is a fast and efficient tool for scanning servers and extracting information about them. It is written in Go and supports concurrent scanning using workers. Currently, it is in **Beta v1.0** and is actively maintained.
-
----
-
-```markdown
 # AlphaUnx (alphaunx.go)
 
-AlphaUnx (`alphaunx.go`) is a fast and efficient tool for scanning servers and extracting information about them. The tool is written in Go and supports concurrent scanning using workers. It is currently in **Beta v1.0** and is actively maintained.
+**AlphaUnx** (`alphaunx.go`) is a fast and efficient tool for scanning servers and extracting information about them. Written in Go, it supports concurrent scanning using workers. It is currently in **Beta v1.0** and is actively maintained.
 
 ---
 
@@ -72,7 +66,7 @@ AlphaUnx (`alphaunx.go`) is a fast and efficient tool for scanning servers and e
 
 ## Usage
 
-1. Create a `hosts.txt` file containing a list of domains you want to scan, with each domain on a separate line.
+1. Create a `hosts.txt` file containing a list of domains you want to scan, each on a separate line.
 
 2. Run the tool:
 
@@ -117,8 +111,7 @@ go run alphaunx.go hosts.txt
 - **Developer**: Dark503
 - **Version**: Beta v1.0
 - **Telegram**: @1300e
-```
 
 ---
 
-This version is fully in English and corrected.
+Now, everything is clearly formatted and in English!
