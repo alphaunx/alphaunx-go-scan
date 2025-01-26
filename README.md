@@ -48,7 +48,7 @@ Here’s the text rewritten in a clean and consistent format in English:
    sudo apt-get install golang
    ```
 
-2. Download the code:
+2. Installing using wget :
 
    ```bash
    wget https://raw.githubusercontent.com/alphaunx/alphaunx-go/refs/heads/main/alphaunx.go
