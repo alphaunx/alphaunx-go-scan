@@ -1,7 +1,6 @@
-# alphaunx-go
-AlphaUnix-Go Scan is a powerful and flexible Host Scanner tool Built using the Go programming language, this tool is designed for fast and efficient network scanning, making it ideal for discovering active hosts and open ports on a network.
+GitHub automatically adds a copy button to code blocks in the README.md file. If the copy button is not appearing, it might be due to improper formatting of the code blocks. Below is the corrected and properly formatted README.md file to ensure the copy button appears:
 
-Here’s the updated README.md file with proper formatting and a copy button suggestion for code blocks. GitHub supports copy buttons for code blocks natively, so no additional setup is required. Just ensure the code blocks are properly formatted.
+---
 
 # AlphaUnx (alphaunx.go)
 
@@ -92,6 +91,7 @@ bash
 
 ### `hosts.txt` File
 
+plaintext
 example.com
 google.com
 github.com
@@ -103,6 +103,7 @@ go run alphaunx.go hosts.txt
 
 ### Output
 
+plaintext
 [✓] example.com [200] Nginx
 [✓] google.com [200] Google Frontend
 [✓] github.com [200] GitHub.com
@@ -124,43 +125,35 @@ go run alphaunx.go hosts.txt
 - **Telegram**: @1300e
 ---
 
-### HCreate a New Repository on GitHubw Repository on GitHub**:
-   - Log in to your GitHub account.
-   - Click on "New" to create a new repository.
-   - Name the repository, for example, alphaunx-go.
-   - Choose the appropriate settings (public or private) and click "Upload the Code to the RepositoryCode to the Repository**:
-   - Use Git to upload the code to the repository.
-
-  
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/alphaunx/alphaunx-go.git
-   git push -u origin main
+### Steps to Ensure Proper Code Block Formatting Code Block Formatting**:
+   - Use triple backticks (
+   - Specify the language after the opening backticks (e.g., `
+```bash ```` for Bash commands or
+   Example:
    
-3. **Create the README.md File**:
-   - Create a README.md file in the root directory of the repository and add the Push the Changesve.
-
-4. **Push the Changes**:
-   - Commit and push the README.md file to GitHub.
+markdown
+   ```bash
+   go run alphaunx.go hosts.txt
+  
+   
+2. **Push the Updated README.md to GitHub**:
+   - After making the changes, push the updated README.md file to GitHub.
 
   
    git add README.md
-   git commit -m "Add README.md file with tool details"
+   git commit -m "Fix code block formatting for copy button"
    git push origin main
    
----
-
-### Copy Button for Code Blocks
-
-copy buttoncally adds a **copy button** to code blocks in the README.md file. Users can click the copy button to copy the commands directly.
-
-For example:
-
-go run alphaunx.go hosts.txt
-The copy button will appear in the top-right corner of the code block when viewed on GitHub.
+3. **Check the Copy Button**:
+   - Once the file is updated on GitHub, the copy button should appear automatically in the top-right corner of each code block.
 
 ---
 
-Now, your tool alphaunx.go is ready to be shared on GitHub with clear installation and usage instructions, along with version and developer information!
+### Why the Improper Formattingppear
+
+- **Improper Formatting**: If the code block is not wrapped in triple backticks or the language is not specified, GitHub may not Caching Issuescode block.
+- **Caching Issues**: Sometimes, GitHub caches the README.md file. Wait a few minutes or refresh the page.
+
+---
+
+Now, the README.md filecopy buttonrmatted, and the **copy button** should appear next to all code blocks when viewed on GitHub.
