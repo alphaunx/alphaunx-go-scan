@@ -336,5 +336,5 @@ func main() {
         }
     }
 
-    fmt.Printf("\n%s[+] Telegram Channel: @alphaunx  Owner: @l300e %s\n", Green, Reset)
+    fmt.Printf("\n%s[+] Telegram Channel: @alphaunx  Owner (any issue or problem report here): @l300e %s\n", Green, Reset)
 }
