@@ -87,7 +87,6 @@
 
 - **Developer**: Dark503
 - **Version**: Beta v1.0
-- **Telegram**: @1300e
 
 ---
 ## Our Telegram channel to report any problems
