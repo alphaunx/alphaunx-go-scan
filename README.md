@@ -73,25 +73,6 @@
 3. Enter the number of workers (between 10 and 500) when prompted.
 
 4. The tool will scan the domains and display the results, including the server type, status code, and response time.
-
----
-
-## Example
-
-### `hosts.txt` File
-
-```
-example.com
-google.com
-github.com
-```
-
-### Running the Tool
-
-```bash
-go run alphaunx.go hosts.txt
-```
-
 ---
 
 ## Notes
@@ -109,5 +90,8 @@ go run alphaunx.go hosts.txt
 - **Telegram**: @1300e
 
 ---
+## Our Telegram channel to report any problems
 
-Now, everything is clearly formatted and in English!
+Any problem or report here : t.me/alphaunx
+
+---
