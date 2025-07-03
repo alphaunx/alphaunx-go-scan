@@ -106,7 +106,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 ### Ping Tool
 - Checks host connectivity using system ping commands
 - Colored output based on success or failure
-### Update Tool
+### Update Checker
 - Checks for updates from GitHub repository
 - Verifies Git installation
 - Provides force update option
