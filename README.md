@@ -1,96 +1,129 @@
+# AlphaUnx (alphaunx-go)
+AlphaUnx is a powerful, fast, and efficient network scanning toolkit written in Go. It provides a comprehensive suite of tools for server and network analysis with an easy-to-use interface. The current version is v1.5 Stable .
 
+## Features
+AlphaUnx includes eight specialized tools for different network scanning and analysis tasks:
 
-# AlphaUnx (alphaunx.go)
-
-**AlphaUnx** (`alphaunx.go`) is a fast and efficient tool for scanning servers and extracting information about them. Written in Go, it supports concurrent scanning using workers. It is currently in **Beta v1.0** and is actively maintained.
-
----
-
+1. Host Scanner - Scan large batches of domains to check their status and server information
+2. Port Scanner - Discover open ports on servers and devices
+3. Subdomain Finder - Search for subdomains of a specific domain using multiple sources
+4. CIDR Scanner - Scan IP ranges using CIDR notation
+5. IP Domain Lookup - Discover domains hosted on a specific IP address
+6. CDN Finder - Identify CDN providers for domains
+7. Ping Tool - Check host or IP connectivity
+8. Update Checker - Stay up-to-date with the latest tool versions
 ## Requirements
-
-- **Go 1.16 or higher**
-- A file containing a list of domains to scan (e.g., `hosts.txt`)
-
----
-
+- Go 1.16 or higher
+- Internet connection for advanced features like subdomain finding
+- Git (for update functionality)
 ## Installation
-
 ### On Termux
-
 1. Install Go:
-
-   ```bash
-   pkg install golang
+   
    ```
-
-2. Installing using wget :
-
-   ```bash
-    wget https://raw.githubusercontent.com/alphaunx/alphaunx-go/refs/heads/main/alphaunx.go
+   pkg install golang git
    ```
-
+2. Install the tool using wget:
+   
+   ```
+   wget https://raw.
+   githubusercontent.com/
+   alphaunx/alphaunx-go/main/
+   alphaunx.go
+   ```
 3. Run the tool:
-
-   ```bash
-   go run alphaunx.go hosts.txt
+   
    ```
-
----
-
+   go run alphaunx.go
+   ```
 ### On Kali Linux
-
 1. Install Go:
-
-   ```bash
-   sudo apt-get update
-   sudo apt-get install golang
+   
    ```
-
-2. Installing using wget :
-
-   ```bash
-   wget https://raw.githubusercontent.com/alphaunx/alphaunx-go/refs/heads/main/alphaunx.go
+   sudo apt-get update
+   sudo apt-get install 
+   golang git
    ```
-
+2. Install the tool using wget:
+   
+   ```
+   wget https://raw.
+   githubusercontent.com/
+   alphaunx/alphaunx-go/main/
+   alphaunx.go
+   ```
 3. Run the tool:
-
-   ```bash
-   go run alphaunx.go hosts.txt
+   
    ```
-
----
-
+   go run alphaunx.go
+   ```
 ## Usage
-
-1. Create a `hosts.txt` file containing a list of domains you want to scan, each on a separate line.
-
-2. Run the tool:
-
-   ```bash
-   go run alphaunx.go hosts.txt
+1. Run the tool:
+   
    ```
-
-3. Enter the number of workers (between 10 and 500) when prompted.
-
-4. The tool will scan the domains and display the results, including the server type, status code, and response time.
----
-
+   go run alphaunx.go
+   ```
+2. Select the appropriate mode from the main menu:
+   
+   - [1] Host Scanner - Scan domains from a file or single domain
+   - [2] Port Scanner - Scan ports for IP addresses/domains
+   - [3] Subdomain Finder - Find subdomains for a domain
+   - [4] CIDR Scanner - Scan CIDR ranges
+   - [5] IP Domain Lookup - Collect domains from an IP address
+   - [6] CDN Finder - Detect CDN networks
+   - [7] Ping Tool - Check connectivity
+   - [8] Update Checker - Check for updates
+3. Follow the on-screen instructions for each mode.
+## Advanced Features
+- Multitasking : The tool supports concurrent operations to speed up scanning processes with configurable worker counts (10-500)
+- Result Saving : Ability to save scan results to text files
+- Colored Interface : User-friendly interface with ANSI colors for enhanced user experience
+- Progress Indicators : Display progress bars for long scanning operations
+## Tool-Specific Features
+### Host Scanner
+- Supports single domains, comma-separated lists, or input from files
+- Displays status codes and server information for active hosts
+- Real-time progress tracking
+### Port Scanner
+- Scans common ports on target hosts
+- Concurrent connections with configurable worker count
+- Immediate display of open ports
+### Subdomain Finder
+- Uses multiple sources (crt.sh, hackertarget.com, rapiddns.io)
+- Real-time display of found subdomains
+- Progress spinner during search
+### CIDR Scanner
+- Generates and scans all IPs in a CIDR range
+- Concurrent scanning with progress bar
+- Displays active hosts with status codes
+### IP Domain Lookup
+- Searches multiple online sources for domains associated with an IP
+- Parallel querying using goroutines
+- Filters out invalid or resource-related domains
+### CDN Finder
+- Identifies CDN providers by analyzing HTTP headers and CNAME records
+- Supports a wide range of CDN patterns
+- Displays detected CDNs and relevant headers
+### Ping Tool
+- Checks host connectivity using system ping commands
+- Adapts to Windows or Unix-like systems
+- Colored output based on success or failure
+### Update Tool
+- Checks for updates from GitHub repository
+- Verifies Git installation
+- Provides force update option
 ## Notes
+- The tool uses HTTP HEAD requests to minimize data transfer
+- Internet connection is required for features like subdomain finding and IP domain lookup
+- Results are saved to /sdcard/ on Android/Termux or the current directory on other systems
+- This is a v1.5 Stable release that is regularly updated
+## Developer
+- Developer : ᴅᴀʀᴋ 404 - ɴᴏᴛ ꜰᴏɴᴜᴅ
+- Version : v1.5 Stable
+## Contact and Issue Reporting
+For reporting any issues or inquiries, please contact via:
 
-- The tool uses HTTP `HEAD` requests to minimize data transfer.
-- Ensure the `hosts.txt` file is in the same directory as the script.
-- This is a **Beta v1.0** release. Please report any issues or bugs.
-
----
-
-## Credits
-
-- **Developer**: Dark503
-- **Version**: Beta v1.0
-
----
-## Our Telegram channel to report any problems
-
-Any problem or report here : t.me/alphaunx
-
----
+- Telegram Channel: t.me/alphaunx
+- Technical Reports: t.me/l300e
+## Disclaimer
+This tool is intended for legal and ethical use only. The developer is not responsible for any illegal use of the tool.
