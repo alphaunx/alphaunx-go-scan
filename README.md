@@ -22,7 +22,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 1. Install Go:
    
    ```
-   pkg install golang git
+   pkg install golang
    ```
 2. Install the tool using wget:
    
@@ -43,7 +43,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
    ```
    sudo apt-get update
    sudo apt-get install 
-   golang git
+   golang
    ```
 2. Install the tool using wget:
    
