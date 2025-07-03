@@ -35,7 +35,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 3. Run the tool:
    
    ```
-   go run alphaunx.go
+   go run aunx.go
    ```
 ### On Kali Linux
 1. Install Go:
@@ -56,7 +56,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 3. Run the tool:
    
    ```
-   go run alphaunx.go
+   go run aunx.go
    ```
 ## Usage
 1. Run the tool:
