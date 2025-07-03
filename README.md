@@ -1,7 +1,6 @@
 # Alphaunx (alphaunx-go)
 AlphaUnx is a powerful, fast, and efficient network scanning toolkit written in Go. It provides a comprehensive suite of tools for server and network analysis with an easy-to-use interface. The current version is v1.5 Stable .
 
-![Image alt](https://github.com/alphaunx/alphaunx-go-scanner-toolkit/blob/a964550f2b7dc373fbda6d1336f1219a81eb0c24/alphaunx%20-go%20scanner-ter.jpg)
 
 ## Features
 AlphaUnx includes eight specialized tools for different network scanning and analysis tasks:
