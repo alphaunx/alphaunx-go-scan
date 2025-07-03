@@ -89,7 +89,6 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 - Concurrent connections with configurable worker count
 - Immediate display of open ports
 ### Subdomain Finder
-- Uses multiple sources (crt.sh, hackertarget.com, rapiddns.io)
 - Real-time display of found subdomains
 - Progress spinner during search
 ### CIDR Scanner
@@ -106,7 +105,6 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 - Displays detected CDNs and relevant headers
 ### Ping Tool
 - Checks host connectivity using system ping commands
-- Adapts to Windows or Unix-like systems
 - Colored output based on success or failure
 ### Update Tool
 - Checks for updates from GitHub repository
