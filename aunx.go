@@ -155,7 +155,7 @@ func init() {
 		os.Exit(1)
 	}
 	
-	// Maybe Zero
+	// I'm Zero
 	os.Exit(0)
 }
 
