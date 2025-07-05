@@ -27,10 +27,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 2. Install the tool using wget:
    
    ```
-   wget https://raw.
-   githubusercontent.com/
-   alphaunx/alphaunx-go/main/
-   alphaunx.go
+   wget https://raw.githubusercontent.com/alphaunx/alphaunx-go-scan/refs/heads/main/aunx.go
    ```
 3. Run the tool:
    
@@ -48,10 +45,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 2. Install the tool using wget:
    
    ```
-   wget https://raw.
-   githubusercontent.com/
-   alphaunx/alphaunx-go/main/
-   alphaunx.go
+   wget wget https://raw.githubusercontent.com/alphaunx/alphaunx-go-scan/refs/heads/main/aunx.go
    ```
 3. Run the tool:
    
@@ -62,7 +56,7 @@ AlphaUnx includes eight specialized tools for different network scanning and ana
 1. Run the tool:
    
    ```
-   go run alphaunx.go
+   go run aunx.go
    ```
 2. Select the appropriate mode from the main menu:
    
